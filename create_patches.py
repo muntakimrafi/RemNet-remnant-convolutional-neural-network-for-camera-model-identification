@@ -1,8 +1,4 @@
-"""
-Created on Sat Dec 30 15:41:11 2017
 
-@author: DSP
-"""
 import math
 import numpy as np
 import os
