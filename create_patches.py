@@ -25,19 +25,10 @@ def compress(img,quality):
     imwrite('temp.jpg', img, quality=quality)
     return imread('temp.jpg')
 
-def gauss_noise(img, mean, var):
-    row, col, ch = img.shape
-    sigma = var ** 0.5
-    gauss = np.random.normal(mean,sigma,(row,col,ch))
-    gauss = gauss.reshape(row,col,ch)
-    noisy = img + gauss
-    return noisy
-
 #%%
 # gamma = 1.2
 scale = 2.0
 # quality = 90
-#mean, var = 0, 1
 def patch_creator(single_image_dir,num_row = 256,num_col = 256):
     im = Image.open(img_name)
     single_image = np.array(im)
@@ -45,7 +36,6 @@ def patch_creator(single_image_dir,num_row = 256,num_col = 256):
     single_image = resize(single_image, scale)
     # single_image = adjust_gamma(single_image, gamma)
     # single_image = compress(single_image, quality)
-#    single_image = gauss_noise(single_image, mean, var)
     
     
     a , b = single_image.shape[0], single_image.shape[1]
