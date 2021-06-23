@@ -1,8 +1,5 @@
-"""
-Created on Sat Dec 30 15:41:11 2017
 
-@author: DSP
-"""
+
 import math
 import numpy as np
 import os
@@ -14,23 +11,6 @@ from operator import itemgetter
 import matplotlib.pyplot as plt
 import re
 start = time.time()
-#%%Manipulations
-#import scipy.misc
-#def resize(img, scale):
-#    return scipy.misc.imresize(img, scale, interp='bicubic')
-#
-#from skimage import exposure
-#
-#def adjust_gamma(img, gamma):
-#    return exposure.adjust_gamma(img, gamma=gamma)
-#
-#from io import StringIO
-#def compress(img,quality):
-#    buffer = StringIO.StringIO()
-#    img.save(buffer, "JPEG", quality=quality)
-#    return buffer.contents()
-
-#%%
 
 def patch_creator(single_image_dir,num_row = 128,num_col = 128):
     im = Image.open(single_image_dir)
