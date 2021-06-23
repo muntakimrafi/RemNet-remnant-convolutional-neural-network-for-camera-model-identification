@@ -1,0 +1,1 @@
+# RemNet-remnant-convolutional-neural-network-for-camera-model-identification
